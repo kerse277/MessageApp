@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:emojicon="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/messages_back"
+    android:orientation="vertical"
+    tools:context="com.kerse.messageapp.activity.MessagingActivity">
+
+
+    <RelativeLayout
+        android:id="@+id/messagingToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@color/bg_login"
+        android:elevation="5dp">
+
+        <ImageButton
+            android:id="@+id/messageBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="4dp"
+            android:background="#00FFFFFF"
+            app:srcCompat="@drawable/backbutton" />
+        <RelativeLayout
+            android:id="@+id/userProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/messageAtth"
+            android:layout_toStartOf="@+id/messageAtth"
+            android:layout_toEndOf="@id/messageBack"
+            android:layout_toRightOf="@+id/messageBack">
+        <TextView
+            android:id="@+id/toolbarTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="4dp"
+            android:layout_marginLeft="5dp"
+            android:singleLine="true"
+            android:text="askhdjnkasdjnkajsdnkasdnkajsdnaskdnakjdsad"
+            android:textAppearance="@android:style/TextAppearance.Material.Medium"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            tools:targetApi="lollipop"
+            android:layout_toRightOf="@+id/toolbar_logo"
+            android:layout_toEndOf="@+id/toolbar_logo" />
+
+        <TextView
+            android:id="@+id/userStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/toolbarTitle"
+            android:text="asdasdasndlkansdlkasndkjasndkjasndkajsdnaksjdn"
+            android:singleLine="true"
+            android:layout_marginLeft="5dp"
+            android:textColor="@color/white"
+            android:layout_toRightOf="@+id/toolbar_logo"
+            android:layout_toEndOf="@+id/toolbar_logo" />
+
+        <ImageView
+            android:id="@+id/toolbar_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="4dp"
+            android:layout_alignParentLeft="true"
+            android:background="#00FFFFFF" />
+        </RelativeLayout>
+        <ImageButton
+            android:id="@+id/messageMenu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="#00FFFFFF"
+            app:srcCompat="@drawable/option_menu_icon" />
+
+        <ImageButton
+            android:id="@+id/messageAtth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/messageMenu"
+            android:layout_toStartOf="@+id/messageMenu"
+            android:background="#00FFFFFF"
+            app:srcCompat="@drawable/attachment" />
+        <ImageButton
+            android:id="@+id/messageDelete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:visibility="gone"
+            android:layout_toLeftOf="@+id/messageMenu"
+            android:layout_toStartOf="@+id/messageMenu"
+            android:background="#00FFFFFF"
+            app:srcCompat="@drawable/delete" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/messageSend"
+        android:layout_weight="20">
+
+        <android.support.v7.widget.RecyclerView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/messagingRecycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="1dp"
+            android:layout_marginRight="1dp"
+            android:elevation="5dp" />
+    </RelativeLayout>
+
+
+
+
+    <include
+        layout="@layout/send_message_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="bottom" />
+</LinearLayout>

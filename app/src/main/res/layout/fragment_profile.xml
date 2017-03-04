@@ -1,0 +1,144 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="#FFFFFF"
+    tools:context="com.kerse.messageapp.fragment.ProfileFragment">
+
+
+    <ImageView
+        android:id="@+id/profilePhoto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+         />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/profilePhoto"
+
+        android:layout_margin="10dp">
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/linear2"
+            android:layout_centerHorizontal="true"
+            android:orientation="vertical">
+
+            <TextView
+                android:textAlignment="center"
+                android:id="@+id/profileFullName"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:padding="10dp"
+                android:textColor="#000"
+                tools:targetApi="lollipop"
+                android:textAppearance="@android:style/TextAppearance.Material.Medium"
+                />
+            <TextView
+                android:id="@+id/profileStatus"
+                android:textAlignment="center"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@color/white"
+                android:padding="10dp"
+                android:textColor="#000"
+                tools:targetApi="lollipop"
+                android:textAppearance="@android:style/TextAppearance.Material.Medium"
+                 />
+
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/linear2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:src="@drawable/phone"
+                android:id="@+id/imageView3" />
+
+            <TextView
+                android:id="@+id/profilePhoneNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="@android:style/TextAppearance.Material.Medium"
+                android:textStyle="bold"
+                tools:targetApi="lollipop"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/imageView3"
+                android:layout_toEndOf="@+id/imageView3" />
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/profileEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_below="@+id/linearLayout2"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="4dp"
+            android:background="@color/bg_login"
+            android:clickable="false"
+            android:text="Edit"
+            android:textColor="@color/white" />
+
+        <ProgressBar
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+
+            android:visibility="gone"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/profileEdit"
+            android:layout_alignRight="@+id/profileEdit"
+            android:layout_alignEnd="@+id/profileEdit"
+            android:layout_alignLeft="@+id/profileEdit"
+            android:layout_alignStart="@+id/profileEdit"
+            android:layout_alignBottom="@+id/profileEdit"
+            android:id="@+id/editProgress" />
+
+
+    </RelativeLayout>
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/update_photo"
+        android:background="#00FFFFFF"
+        android:layout_alignTop="@+id/profilePhoto"
+        android:layout_alignRight="@+id/profilePhoto"
+        android:layout_alignEnd="@+id/profilePhoto"
+        android:id="@+id/updateProPhoto" />
+
+    <ProgressBar
+        style="?android:attr/progressBarStyle"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/profilePhotoProgress"
+        android:layout_alignTop="@+id/updateProPhoto"
+        android:layout_alignRight="@+id/updateProPhoto"
+        android:layout_alignEnd="@+id/updateProPhoto"
+        android:layout_alignLeft="@+id/updateProPhoto"
+        android:layout_alignStart="@+id/updateProPhoto"
+        android:layout_alignBottom="@+id/updateProPhoto" />
+
+</RelativeLayout>

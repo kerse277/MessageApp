@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:emojicon="http://schemas.android.com/tools"
+    android:gravity="bottom"
+    android:background="#00FFFFFF"
+    android:orientation="horizontal">
+    <com.daasuu.bl.BubbleLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_margin="5dp"
+        app:bl_bubbleColor="#FFF"
+        app:bl_arrowDirection="right"
+        app:bl_arrowHeight="0dp"
+        app:bl_arrowPosition="0dp"
+        app:bl_arrowWidth="0dp"
+        android:elevation="5dp"
+        app:bl_cornersRadius="15dp"
+        app:bl_strokeWidth="0.5dp">
+
+        <ImageView
+            android:id="@+id/emoji_btn"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:padding="4dp"
+            android:src="@drawable/smiley" />
+
+        <hani.momanii.supernova_emoji_library.Helper.EmojiconEditText
+            android:id="@+id/emojicon_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="40dp"
+            android:background="#00FFFFFF"
+            android:hint="Write a message"
+            emojicon:emojiconSize="30sp" />
+</com.daasuu.bl.BubbleLayout>
+    <ImageButton
+        android:id="@+id/messageSend"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="5"
+        android:background="#00FFFFFF"
+        android:layout_margin="5dp"
+        android:padding="4dp"
+        android:src="@drawable/send_back" />
+</LinearLayout>

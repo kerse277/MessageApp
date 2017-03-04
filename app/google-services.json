@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "657936365288",
+    "firebase_url": "https://newmessageapp.firebaseio.com",
+    "project_id": "newmessageapp",
+    "storage_bucket": "newmessageapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:657936365288:android:da6e9c22255a3e17",
+        "android_client_info": {
+          "package_name": "com.kerse.messageapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "657936365288-91g6ttqv27lmnqn3gvnp9vq5q8kj1m5m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBGprLnDVN-fAoS9ED5ce4HUAY7N-vbcik"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
